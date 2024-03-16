@@ -15,33 +15,41 @@ public class Repastory<TEntity> : IRepostory<TEntity> where TEntity : Auditable
         this.entities = context.Set<TEntity>();
     }
 
-    public Task<TEntity> InsertAsync(TEntity entity)
+    public async Task<TEntity> InsertAsync(TEntity entity)
     {
-        throw new NotImplementedException();
+        return (await entities.AddAsync(entity)).Entity;
     }
 
-    public Task<TEntity> DeleteAsync(TEntity entity)
+    public async Task<TEntity> DeleteAsync(TEntity entity)
     {
-        throw new NotImplementedException();
+        entities.Entry(entity).State = EntityState.Modified;
+        return await Task.FromResult(entity);
     }
 
-    public IEnumerable<TEntity> GetAllAsEnumerable()
+    public IEnumerable<TEntity> SelectAllAsEnumerable()
     {
-        throw new NotImplementedException();
+        return entities.AsEnumerable();
     }
 
-    public IQueryable<TEntity> GetAllAsQueryable()
+    public IQueryable<TEntity> SelectAllAsQueryable()
     {
-        throw new NotImplementedException();
+        return entities.AsQueryable();
     }
 
-    public Task<TEntity> SelectById(long id)
+
+    public async Task<TEntity> UpdateAsync(TEntity entity)
     {
-        throw new NotImplementedException();
+        entities.Entry(entity).State = EntityState.Modified;
+        return await Task.FromResult(entity);
     }
 
-    public Task<TEntity> UpdateAsync(TEntity entity)
+    public async Task SavedAsync()
     {
-        throw new NotImplementedException();
+        await context.SaveChangesAsync();
+    }
+
+    public async Task<TEntity> SelectByIddAsync(long id)
+    {
+        return await entities.FirstOrDefaultAsync(entity => entity.Id == id && !entity.IsDeleted);
     }
 }

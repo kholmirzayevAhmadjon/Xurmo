@@ -10,9 +10,11 @@ public interface IRepostory<TEntity> where TEntity : Auditable
 
     Task<TEntity> DeleteAsync(TEntity entity);
 
-    Task<TEntity> SelectById(long id);
+    Task<TEntity> SelectByIddAsync(long id);
 
-    IQueryable<TEntity> GetAllAsQueryable();
+    IQueryable<TEntity> SelectAllAsQueryable();
 
-    IEnumerable<TEntity> GetAllAsEnumerable();
+    IEnumerable<TEntity> SelectAllAsEnumerable();
+
+    Task SavedAsync();
 }
