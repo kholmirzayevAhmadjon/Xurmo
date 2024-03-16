@@ -1,6 +1,8 @@
 ﻿namespace Xurmo.Domain.Configuration;
 
+#pragma warning disable TI4106 // Use XML tags for documenting types and members
 public static class Constants
+#pragma warning restore TI4106 // Use XML tags for documenting types and members
 {
-    public static string XURMO_DB = "Server=dpg-cnke4e21hbls73da30s0-a.oregon-postgres.render.com;Database=xurmo_knve;    User Id=xurmo_knve_user ;Password=lUk6r9K2Iw8MWh0m9RB3LQhI9C1FKt16;";
+    public static string XURMO_DB = "";
 }
