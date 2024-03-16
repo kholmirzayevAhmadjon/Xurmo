@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Data", "Xurmo.Data\Xurmo.Data.csproj", "{27BEB307-2AC7-47BA-9EDA-456AE3252F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Data", "Xurmo.Data\Xurmo.Data.csproj", "{27BEB307-2AC7-47BA-9EDA-456AE3252F36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Domain", "Xurmo.Domain\Xurmo.Domain.csproj", "{15C398C4-A581-45CD-ABE5-B576EC003367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Domain", "Xurmo.Domain\Xurmo.Domain.csproj", "{15C398C4-A581-45CD-ABE5-B576EC003367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Service", "Xurmo.Service\Xurmo.Service.csproj", "{16986052-95F2-4E1B-B623-42F1DA83214B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Service", "Xurmo.Service\Xurmo.Service.csproj", "{16986052-95F2-4E1B-B623-42F1DA83214B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Menu", "Xurmo.Menu\Xurmo.Menu.csproj", "{893BAECB-8357-41ED-975A-DA21F6CE494D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Menu", "Xurmo.Menu\Xurmo.Menu.csproj", "{893BAECB-8357-41ED-975A-DA21F6CE494D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Models", "Xurmo.Models\Xurmo.Models.csproj", "{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
