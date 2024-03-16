@@ -1,8 +1,7 @@
-﻿using Xurmo.Domain.Categories;
-using Xurmo.Domain.Commons;
+﻿using Xurmo.Domain.Commons;
 
 
-namespace Xurmo.Domain.Products;
+namespace Xurmo.Domain.Entities;
 
 public class Product : Auditable
 {

@@ -1,6 +1,6 @@
 ﻿using Xurmo.Domain.Commons;
 
-namespace Xurmo.Domain.Categories;
+namespace Xurmo.Domain.Entities;
 
 public class Category : Auditable
 {
