@@ -43,10 +43,8 @@ public class UserService : IUserServise
         return true;        
     }
 
-    public async Task<IEnumerable<UserViewModel>> GetAll()
-    {
-        return repository.SelectAllAsEnumerable().Where(u => u.IsDeleted).MapTo<UserViewModel>();
-    }
+    public Task<IEnumerable<UserViewModel>> GetAll()
+        => Task.FromResult(repository.SelectAllAsEnumerable().Where(u => u.IsDeleted).MapTo<UserViewModel>());
 
     public async Task<UserViewModel> GetByIdAsync(long id)
     {
