@@ -1,6 +1,6 @@
 ﻿namespace Xurmo.Models.Products;
 
-public class ProducUpdateModel
+public class ProductUpdateModel
 {
     public string Name { get; set; }
 

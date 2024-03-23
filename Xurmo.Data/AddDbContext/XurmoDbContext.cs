@@ -4,12 +4,10 @@ using Xurmo.Domain.Entities;
 
 namespace Xurmo.Data.AddDbContext;
 
-#pragma warning disable TI4106 // Use XML tags for documenting types and members
 public  class XurmoDbContext : DbContext
-#pragma warning restore TI4106 // Use XML tags for documenting types and members
 {
-    public DbSet<Category> categories { get; set; }
-    public DbSet<Product> products { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
