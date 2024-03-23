@@ -13,5 +13,5 @@ public class Product : Auditable
 
     public long CadegoryId { get; set; }
 
-    public Category Categories { get; set; }
+    public Category Category { get; set; }
 }

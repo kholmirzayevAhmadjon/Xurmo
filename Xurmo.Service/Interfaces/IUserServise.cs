@@ -8,5 +8,6 @@ public interface IUserServise
     Task<UserViewModel> UpdateAsync(long id, UserUpdateModel model);
     Task<bool> DeleteAsync(long id);
     Task<UserViewModel> GetByIdAsync(long id);
-    Task<IEnumerable<UserViewModel>> GetAllAsync();
+    Task<IEnumerable<UserViewModel>> GetAll();
+    Task<UserViewModel> UserOrders(long id);
 }
