@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Xurmo.Data.Repastories;
 
-public class Repastory<TEntity> : IRepostory<TEntity> where TEntity : Auditable
+public class Repasitory<TEntity> : IRepository<TEntity> where TEntity : Auditable
 {
     private readonly XurmoDbContext context;
     private readonly DbSet<TEntity> entities;
-    public Repastory(XurmoDbContext contexts)
+    public Repasitory(XurmoDbContext contexts)
     {
         this.context = contexts;
         this.entities = context.Set<TEntity>();

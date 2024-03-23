@@ -2,7 +2,7 @@
 
 namespace Xurmo.Data.IRepastories;
 
-public interface IRepostory<TEntity> where TEntity : Auditable
+public interface IRepository<TEntity> where TEntity : Auditable
 {
     Task<TEntity> InsertAsync(TEntity entity);
 
