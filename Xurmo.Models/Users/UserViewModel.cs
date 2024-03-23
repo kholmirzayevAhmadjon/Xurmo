@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Xurmo.Models.Users;
+﻿namespace Xurmo.Models.Users;
 
 public class UserViewModel
 {

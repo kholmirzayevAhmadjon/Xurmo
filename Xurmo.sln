@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Domain", "Xurmo.Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Service", "Xurmo.Service\Xurmo.Service.csproj", "{16986052-95F2-4E1B-B623-42F1DA83214B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Menu", "Xurmo.Menu\Xurmo.Menu.csproj", "{893BAECB-8357-41ED-975A-DA21F6CE494D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xurmo.Models", "Xurmo.Models\Xurmo.Models.csproj", "{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Models", "Xurmo.Models\Xurmo.Models.csproj", "{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xurmo.Api", "Xurmo.Api\Xurmo.Api.csproj", "{4F46E6DD-F56A-4748-98B4-41380EBB053A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{16986052-95F2-4E1B-B623-42F1DA83214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16986052-95F2-4E1B-B623-42F1DA83214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16986052-95F2-4E1B-B623-42F1DA83214B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{893BAECB-8357-41ED-975A-DA21F6CE494D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{910215AA-6ED7-434B-9DD3-BA5F8787FA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F46E6DD-F56A-4748-98B4-41380EBB053A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F46E6DD-F56A-4748-98B4-41380EBB053A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F46E6DD-F56A-4748-98B4-41380EBB053A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F46E6DD-F56A-4748-98B4-41380EBB053A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
