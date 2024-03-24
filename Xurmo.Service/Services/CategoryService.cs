@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Xurmo.Data.IRepastories;
+using Xurmo.Data.IRepostories;
 using Xurmo.Domain.Entities;
 using Xurmo.Models.Categories;
 using Xurmo.Service.Extentions;
@@ -46,7 +46,7 @@ public class CategoryService : ICategoryService
     }
 
     public Task<IEnumerable<CategoryViewModel>> GetAllAsync()
-        => Task.FromResult(repository.SelectAllAsEnumerable().Where(c => c.IsDeleted).MapTo<CategoryViewModel>());
+        => Task.FromResult(repository.SelectAllAsEnumerable().Where(c => !c.IsDeleted).MapTo<CategoryViewModel>());
 
     public async Task<CategoryViewModel> GetByIdAsync(long id)
     {
@@ -63,7 +63,7 @@ public class CategoryService : ICategoryService
 
 
 
-        if(isDelete)
+        if(!isDelete)
         {
             existCategory.IsDeleted = false;
         }
