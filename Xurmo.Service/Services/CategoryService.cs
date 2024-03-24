@@ -21,8 +21,11 @@ public class CategoryService : ICategoryService
 
         if(existCategory != null)
         {
-            await UpdateAsync(existCategory.Id, model.MapTo<CategoryUpdateModel>());
-        }
+            if(existCategory.IsDeleted)
+              return  await UpdateAsync(existCategory.Id, model.MapTo<CategoryUpdateModel>());
+
+            throw new Exception("This category is allredy exist ");
+        };
 
         var category = await repository.InsertAsync(model.MapTo<Category>());
         await repository.SavedAsync();
@@ -53,14 +56,20 @@ public class CategoryService : ICategoryService
         return existCategory.MapTo<CategoryViewModel>();        
     }
 
-    public async Task<CategoryViewModel> UpdateAsync(long id, CategoryUpdateModel model)
+    public async Task<CategoryViewModel> UpdateAsync(long id, CategoryUpdateModel model, bool isDelete = false)
     {
-        var existCategory = await repository.SelectByIddAsync(id)
-            ?? throw new Exception($"This category is not found Id = {id}");
+        var existCategory = repository.SelectAllAsQueryable().FirstOrDefault(c => c.Id == id)
+            ?? throw new Exception("This uuser is not found");
+
+
+
+        if(isDelete)
+        {
+            existCategory.IsDeleted = false;
+        }
 
         existCategory.Name = model.Name;
         existCategory.UpdatedAt = DateTime.UtcNow;
-        existCategory.IsDeleted = false;
         existCategory.Id = id;
         await repository.UpdateAsync(existCategory);
         await repository.SavedAsync();

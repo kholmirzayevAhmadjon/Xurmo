@@ -20,6 +20,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xurmo.Data\Xurmo.Data.csproj" />
+    <ProjectReference Include="..\Xurmo.Domain\Xurmo.Domain.csproj" />
+    <ProjectReference Include="..\Xurmo.Models\Xurmo.Models.csproj" />
+    <ProjectReference Include="..\Xurmo.Service\Xurmo.Service.csproj" />
   </ItemGroup>
 
 </Project>
