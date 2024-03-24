@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using Xurmo.Data.AddDbContext;
-using Xurmo.Data.IRepastories;
+using Xurmo.Data.IRepostories;
 using Xurmo.Data.Repastories;
 using Xurmo.Domain.Entities;
 using Xurmo.Service.Interfaces;
@@ -20,7 +20,7 @@ builder.Services.AddDbContext<XurmoDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-builder.Services.AddScoped<IRepository<Category>, Repasitory<Category>>();
+builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 

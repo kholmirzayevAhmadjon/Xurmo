@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Xurmo.Data.IRepastories;
+using Xurmo.Data.IRepostories;
 using Xurmo.Domain.Entities;
 using Xurmo.Models.Categories;
 using Xurmo.Service.Extentions;

@@ -1,15 +1,15 @@
 ﻿using Xurmo.Domain.Commons;
-using Xurmo.Data.IRepastories;
+using Xurmo.Data.IRepostories;
 using Xurmo.Data.AddDbContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace Xurmo.Data.Repastories;
 
-public class Repasitory<TEntity> : IRepository<TEntity> where TEntity : Auditable
+public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditable
 {
     private readonly XurmoDbContext context;
     private readonly DbSet<TEntity> entities;
-    public Repasitory(XurmoDbContext contexts)
+    public Repository(XurmoDbContext contexts)
     {
         this.context = contexts;
         this.entities = context.Set<TEntity>();
@@ -22,7 +22,6 @@ public class Repasitory<TEntity> : IRepository<TEntity> where TEntity : Auditabl
 
     public async Task<TEntity> DeleteAsync(TEntity entity)
     {
-        entities.Entry(entity).State = EntityState.Modified;
         return await Task.FromResult(entity);
     }
 

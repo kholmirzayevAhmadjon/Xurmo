@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xurmo.Data.IRepastories;
+using Xurmo.Data.IRepostories;
 using Xurmo.Domain.Entities;
 using Xurmo.Models.Products;
 using Xurmo.Service.Interfaces;

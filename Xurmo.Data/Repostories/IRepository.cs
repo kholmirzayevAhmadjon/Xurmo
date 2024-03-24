@@ -1,6 +1,6 @@
 ﻿using Xurmo.Domain.Commons;
 
-namespace Xurmo.Data.IRepastories;
+namespace Xurmo.Data.IRepostories;
 
 public interface IRepository<TEntity> where TEntity : Auditable
 {
